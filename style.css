@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+:root {
+ --pinkOrchid: #FFC8DD;
+ --pinkLavender: #CDB4DB; 
+ --pinkNade: #FFAFCC;
+ --babyBlue: #A2D2FF;
+  
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FFC8DD;
+ 
+}
+
+h2, h4 {
+    color: #c72633;
+}
+
+#container {
+  margin: 24px;
+}
+
+#container canvas {
+  border: 2px solid const (--babyBlue);
+}
