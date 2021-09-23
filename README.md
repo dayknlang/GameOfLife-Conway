@@ -21,6 +21,6 @@ Dayane Lang {♥}
  
 ℹ️ Base para fontes
   
-  https://codigofonte.org/o-jogo-da-vida-de-conway-com-tela-js-e-html5/;
+  https://codigofonte.org/o-jogo-da-vida-de-conway-com-tela-js-e-html5/; <br/>
   https://rosettacode.org/wiki/Conway%27s_Game_of_Life#JavaScript; <br/>
   http://p5js.org
