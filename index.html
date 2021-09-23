@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" "Google Chrome" ;v="84">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" async></script>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -43,19 +44,30 @@
                         estado para a próxima geração.</li>
                 </ul>
                 <p class="card-header text-center">
-                <button type=" button" class="btn btn-outline-primary" onclick="start()">Avançar</button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="equality()">Avançar 01(uma) geração</button>
-                    <button type="button" class="btn btn-outline-success" onclick="activate(5)">Avançar 05(cinco) gerações</button>
-                    <button type="button" class="btn btn-outline-danger" onclick="activate(10)">Avançar 10(dez) gerações</button>
-                    <button type="button" class="btn btn-outline-info" onclick="reset()">Reiniciar</button>
-                    <button type="button" class="btn btn-outline-dark" onclick="stop()">Parar</button>
+                    <button id='btn-start' type=" button"  class="btn btn-outline-primary"
+                        onclick="start()">Avançar</button>
+                    <button id='btn-equality' type="button"  class="btn btn-outline-secondary"
+                        onclick="equality()">Avançar 01(uma)
+                        geração</button>
+                    <button id='btn-activate5' type="button"  class="btn btn-outline-success"
+                        onclick="activate(5)">Avançar 05(cinco)
+                        gerações</button>
+                    <button id='btn-activate10' type="button"  class="btn btn-outline-danger"
+                        onclick="activate(10)">Avançar 10(dez)
+                        gerações</button>
+                    <button id='btn-reset' type="button" class="btn btn-outline-info"
+                        onclick="reset()">Reiniciar</button>
+                    <button id='btn-stop' type="button"  class="btn btn-outline-dark" onclick="stop()">Parar</button>
                 </p>
             </div>
     </section>
     <main id="container">
         <p><strong>Geração</strong> <span id="generation"></span></p>
+
+
     </main>
     <script src="game.js" async></script>
 
 </body>
+
 </html>

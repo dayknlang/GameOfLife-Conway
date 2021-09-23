@@ -1,21 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+@import "variables";
+@import "root";
+@import "containers";
+@import "grid";
 
-:root {
- --pinkOrchid: #FFC8DD;
- --pinkLavender: #CDB4DB; 
- --pinkNade: #FFAFCC;
- --babyBlue: #A2D2FF;
-  
-}
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   background-color: #FFC8DD;
- 
+
 }
 
-h2, h4 {
-    color: #c72633;
+:root {
+  --pinkOrchid: #FFC8DD;
+  --pinkLavender: #CDB4DB;
+  --pinkNade: #FFAFCC;
+  --babyBlue: #A2D2FF;
+  --blackBlue: #102538;
+
+}
+
+h2,
+h4 {
+  color: #c72633;
 }
 
 #container {
@@ -23,5 +31,149 @@ h2, h4 {
 }
 
 #container canvas {
-  border: 2px solid const (--babyBlue);
+  border: 1px solid var(--blackBlue);
+
 }
+
+/*
+.canvas {
+  position: fixed;
+  bottom: 0;
+  z-index: zindex-offcanvas;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  color: canvas-color;
+  visibility: hidden;
+  background-color: canvas-bg-color;
+  background-clip: padding-box;
+  outline: 0;
+  box-shadow: (canvas-box-shadow);
+  transition: (transform canvas-transition-duration ease-in-out);
+}
+
+.canvas-backdrop {
+  background-color: (zindex-offcanvas-backdrop, canvas-backdrop-bg, canvas-backdrop-opacity);
+}
+
+.canvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: canvas-padding-y canvas-padding-x;
+
+}
+
+.canvas-title {
+  margin-bottom: 0;
+  line-height: canvas-title-line-height;
+}
+
+.canvas-body {
+  flex-grow: 1;
+  padding: canvas-padding-y canvas-padding-x;
+  overflow-y: auto;
+}
+
+.canvas-start {
+  top: 0;
+  left: 0;
+  width: canvas-horizontal-width;
+  border-right: canvas-border-width solid canvas-border-color;
+  transform: translateX(-100%);
+}
+
+.canvas-stop {
+  top: 0;
+  right: 0;
+  width: canvas-horizontal-width;
+  border-left: canvas-border-width solid canvas-border-color;
+  transform: translateX(100%);
+}
+
+.canvas-equality {
+  top: 0;
+  right: 0;
+  left: 0;
+  height: canvas-vertical-height;
+  max-height: 100%;
+  border-bottom: canvas-border-width solid canvas-border-color;
+  transform: translateY(-100%);
+}
+
+.canvas-reset {
+  right: 0;
+  left: 0;
+  height: canvas-vertical-height;
+  max-height: 100%;
+  border-top: canvas-border-width solid canvas-border-color;
+  transform: translateY(100%);
+}
+
+
+.canvas.show {
+  transform: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(var(variable-rows, 1), 1fr);
+  grid-template-columns: repeat(var(variable-columns, (grid-columns)), 1fr);
+  gap: var(variable-gap, (grid-gutter-width));
+
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . . . . . .";
+}
+
+
+html, body , #container {
+  height: 100%;
+  margin: 0;
+}
+
+#container * {
+  border: 1px solid red;
+  position: relative;
+}
+
+#container *:after {
+  content:attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+*/
