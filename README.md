@@ -9,6 +9,11 @@ Versão do Jogo da Vida, criado pelo matemático John Horton Conway em 1970. Est
 ℹ️ Informações do projeto
 
 Desafio ofertado direcionado ao Programa Tech da Captalys.
+<br/>
+<br/>
+<img src='https://img.shields.io/badge/Vers%C3%A3o-GameOfLife-yellow'>
+https://gameoflifebydaylang.surge.sh
+
 **********
 ✅ Tecnologias utilizadas
 
