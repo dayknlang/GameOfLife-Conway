@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
     <title>Implementação Jogo da Vida - Jonh Conway</title>
 </head>
+
 <body>
-    
+
+    <section>
+        <div class="card text-justify">
+            <div class="card-header text-center">
+                <h2>Versão Jogo da Vida (Conway)</h2>
+            </div>
+            <div class="card-body">
+                <p class="card-text">O Jogo da Vida foi criado pelo matemático John Horton Conway em 1970. Este é um
+                    jogo do tipo zero-player,
+                    o que significa que sua evolução é determinada por seu estado inicial, não necessitando de interação
+                    subsequente.
+                    O universo do Jogo da Vida, é um tabuleiro bidimensional de células quadradas, onde cada uma delas
+                    tem um
+                    de dois estados possíveis: viva ou morta. Cada célula interage com suas oito vizinhas adjacentes
+                    horizontais,
+                    verticais ou diagonais.</p>
+                <h4 class="card-header text-center">Regras</h4>
+                <p class="card-text">As regras que controlam o comportamento do jogo são simples e elegantes:</p>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Qualquer célula viva com menos de dois vizinhos vivos morre de solidão.
+                    </li>
+                    <li class="list-group-item">Qualquer célula viva com mais de três vizinhos vivos morre de
+                        superpopulação.</li>
+                    <li class="list-group-item">Qualquer célula morta com exatamente três vizinhos vivos se torna uma
+                        célula viva.</li>
+                    <li class="list-group-item">Qualquer célula viva com dois ou três vizinhos vivos continua no mesmo
+                        estado para a próxima geração.</li>
+                </ul>
+                <p class="card-header text-center">
+                <button type=" button" class="btn btn-outline-primary" onclick="start()">Avançar</button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="equality()">Avançar 01(uma) geração</button>
+                    <button type="button" class="btn btn-outline-success" onclick="activate(5)">Avançar 05(cinco) gerações</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="activate(10)">Avançar 10(dez) gerações</button>
+                    <button type="button" class="btn btn-outline-info" onclick="reset()">Reiniciar</button>
+                    <button type="button" class="btn btn-outline-dark" onclick="stop()">Parar</button>
+                </p>
+            </div>
+    </section>
+    <main id="container">
+        <p><strong>Geração</strong> <span id="generation"></span></p>
+    </main>
+    <script src="game.js" async></script>
+
 </body>
 </html>
